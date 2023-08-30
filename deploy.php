@@ -65,7 +65,7 @@ task('deploy:secrets', function () {
 host('prod') // Name of the server
 ->setHostname('3.84.167.20') // Hostname or IP address
 ->set('remote_user', 'root') // SSH user
-->set('branch', 'main') // Git branch
+->set('branch', '10.x') // Git branch
 ->set('deploy_path', '/var/www/html/laravel'); // Deploy path
 
 after('deploy:failed', 'deploy:unlock');  // Unlock after failed deploy
